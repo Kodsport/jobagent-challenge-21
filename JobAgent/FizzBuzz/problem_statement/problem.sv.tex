@@ -1,10 +1,21 @@
 \problemname{FizzBuzz}
-FizzBuzz är ett vanligt spel. Hitta den implementationen av spelet som är mest rätt. 
+Ett företag ska anställa en mjukvaruutveklare till ett topphemligt jobb. Efter mycket headhunting har de nu endast $N$ stycken kandidater kvar. För att testa kandidaternas förmåga att programera bestämmer sig företaget för att be dem implementera FizzBuzz.
+En korrekt implementation av FizzBuzz gör följande:
+För talen 1 till $M$,
+\begin{itemize}
+ \item Om talet är delbart med 3 skrivs "Fizz" ut.
+ \item Om talet är delbart med 5 skrivs "Buzz" ut.
+ \item Om talet är delbart med både 3 och 5 skrivs "FizzBuzz" ut. 
+ \item Om talet varken är delbart med 3 eller 5 skrivs talet ut. 
+\end{itemize}
+
+Då jobbet är topphemligt är företaget mycket noga med att exakt rätt sak skrivs ut på rätt position. Din uppgift är nu att hitta den eller de kandidaterna vars implementation innehåller minst antal fel och därför är mest lämpad för jobbet.
 
 \section*{Indata}
-Indatan består av $N$ rader, med utdatan från person $i$ på rad $i$. Varje rad innehåller 15 strängar, separerade med mellanslag.
+Två tal $N$ och $M$; antalet kandidater och antalet värden deras program ska skriva ut.
+Därefter följer $N$ rader med $M$ värden, separerade med mellanslag. Rad $i$ innehåller utdatan från kandidat $i$.  
 
 \section*{Utdata}
-En rad heltal, sorterade i storleksordning; de personer som gjort den mest korrekta implementationen av FizzBuzz.
+En eller flera heltal, sorterade i storleksordning och separerade med mellanslag; kandidaterna vars implementation av FizzBuzz är mest korrekt. 
 
 
