@@ -1,0 +1,4 @@
+3 15
+1 2 Fizz 4 5 Fizz 7 8 Fizz 10 11 Fizz 13 14 Fizz
+1 2 3 4 Buzz 6 7 8 9 Buzz 11 12 13 14 Buzz
+1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz
