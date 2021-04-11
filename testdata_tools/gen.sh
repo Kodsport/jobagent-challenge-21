@@ -271,7 +271,7 @@ _check_missing_samples () {
   local any=0
   for INF in sample/*.in; do
     local name=$(basename "$INF" .in)
-    if [[ "$name" != '*' && ${cases[$name]} = sample* && ${latestdir[$name]} = "sample" && $REQUIRE_SAMPLE_REUSE = 1 ]]; then
+    if [[ "$name" != '*' && ${cases[$name]} = sample* && ${latestdir[$name]} = "sample" && $REQUIRE_SAMPLE_REUSE = 1 && $USE_SCORING = 1 ]]; then
       _error "sample/$name must be included in some secret test group; add the line \"tc $name\""
       any=1
     fi

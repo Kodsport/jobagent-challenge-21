@@ -1,4 +1,4 @@
-#!.*python3\b
+#!/usr/bin/env python3
 
 def correct_seq(m):
     l = []

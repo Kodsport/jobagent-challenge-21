@@ -1,9 +1,14 @@
-#!.*python3\b
+#!/usr/bin/env python3
 import random
 import collections
 import sys
 
-def correctSeq(m):
+def cmdlinearg(name):
+    for arg in sys.argv:
+        if arg.startswith(name + "="):
+            return arg.split("=", 1)[1]
+
+def correct_seq(m):
     l = []
     for i in range(1,m+1):
         s = ""
@@ -16,55 +21,46 @@ def correctSeq(m):
         l.append(s)
     return l
 
-def genRandom(n,m, fixed_thresh = 0):
-    correct = correctSeq(m)
-    output = "{} {}".format(n,m) + "\n"
+def gen_random(n, m, fixed_thresh):
+    print(n, m)
+    correct = correct_seq(m)
     thresh = random.uniform(0,1)
 
     for i in range(n):
         if not fixed_thresh:
             thresh = random.uniform(0,1)
-        line = ""
 
+        vals = []
         for j in range(m):
             if random.uniform(0,1) > thresh:
-                line += correct[j] + " "
+                vals.append(correct[j])
             else:
-                line += random.choice(correct) + " "
-        output += line[:-1] + "\n"
-    
-    print(output[:-1])
+                vals.append(random.choice(correct))
+        print(*vals)
 
-def allSame(n,m, correct = 1):
-    output = "{} {}".format(n,m) + "\n"
+def all_same(n, m, correct):
+    print(n, m)
     if correct:
-        output += "".join([" ".join(correctSeq(m)) + "\n" for _ in range(n)])
+        line = " ".join(correct_seq(m))
     else:
-        output += (("x "*m)[:-1] + "\n")*n
-    print(output[:-1])
+        line = " ".join(["x"] * m)
+    for _ in range(n):
+        print(line)
 
 def main():
     random.seed(int(sys.argv[-1]))
     n = int(cmdlinearg("n"))
-    m = int(cmdlinearg('m'))
-    arg = cmdlinearg('arg')
+    m = int(cmdlinearg("m"))
+    arg = cmdlinearg("arg")
 
-    if arg == 'r':
-        genRandom(n,m,0)
+    if arg == "r":
+        gen_random(n,m,0)
     if arg == "rt":
-        genRandom(n,m,1)
+        gen_random(n,m,1)
     if arg == "w":
-        allSame(n,m,0)
+        all_same(n,m,0)
     if arg == "c":
-        allSame(n,m,1)
-
-
-
-def cmdlinearg(name):
-    for arg in sys.argv:
-        if arg.startswith(name + "="):
-            return arg.split("=")[1]
-    #return default[name]
+        all_same(n,m,1)
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,0 @@
-range: 0 100
-on_reject: continue
-input_validator_flags: n=1000 m=100

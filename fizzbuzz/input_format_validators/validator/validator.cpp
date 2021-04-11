@@ -1,23 +1,15 @@
 #include "validator.h"
 
 void run(){
-    int n = Int(1, Arg("n")); 
+    int n = Int(2, 1000); 
     Space(); 
-    int m = Int(1, Arg("m"));
+    int m = Int(2, 100);
 	Endl();
 
 	for (int i = 0; i < n; i++) {
-		string Lin = Line();
-        int spaces = 0;
-        string sub = "";
-		for (int j = 0; j < Lin.size(); j++){
-            if (Lin[j] == ' '){
-                spaces++;
-                assert(sub.size() != 0);
-                sub = "";
-            }
-            else sub += Lin[j];
-        }
-        assert(spaces == m - 1);
+		vector<string> tokens = SpacedTokens(m);
+		for (const string& tok : tokens) {
+			assert(!tok.empty());
+		}
 	}
 }
