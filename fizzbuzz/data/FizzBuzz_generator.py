@@ -1,3 +1,4 @@
+#!.*python3\b
 import random
 import collections
 import sys
@@ -16,12 +17,12 @@ def correctSeq(m):
     return l
 
 def genRandom(n,m, fixed_thresh = 0):
-    correct = correct_seq(m)
+    correct = correctSeq(m)
     output = "{} {}".format(n,m) + "\n"
     thresh = random.uniform(0,1)
 
     for i in range(n):
-        if !fixed_thresh:
+        if not fixed_thresh:
             thresh = random.uniform(0,1)
         line = ""
 
@@ -32,7 +33,7 @@ def genRandom(n,m, fixed_thresh = 0):
                 line += random.choice(correct) + " "
         output += line[:-1] + "\n"
     
-    print(output)
+    print(output[:-1])
 
 def allSame(n,m, correct = 1):
     output = "{} {}".format(n,m) + "\n"
@@ -40,7 +41,7 @@ def allSame(n,m, correct = 1):
         output += "".join([" ".join(correctSeq(m)) + "\n" for _ in range(n)])
     else:
         output += (("x "*m)[:-1] + "\n")*n
-    print(output)
+    print(output[:-1])
 
 def main():
     random.seed(int(sys.argv[-1]))

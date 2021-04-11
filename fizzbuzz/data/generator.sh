@@ -1,19 +1,16 @@
 #!/usr/bin/env bash
 
+USE_SCORING=0
 . ../../testdata_tools/gen.sh
 
 use_solution MA.py
 
 compile FizzBuzz_generator.py
 
-samplegroup
-limits n=5 m=15
 sample 1
 sample 2
 sample 3
 
-group group 100
-limits n=1000 m=100
 tc 1
 tc 2
 tc 3
