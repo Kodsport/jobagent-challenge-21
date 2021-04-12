@@ -16,28 +16,28 @@ tc allPairs jobbyteSmallGenerator n=100000 arg=p
 tc allPairs2 jobbyteSmallGenerator n=99999 arg=p
 tc allCorrect jobbyteSmallGenerator n=100000 arg=f
 tc allCorrect2 jobbyteSmallGenerator n=99999 arg=f
-tc Small0 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small1 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small2 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small3 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small4 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small5 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small6 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small7 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small8 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small9 jobbyteSmallGenerator.py n=100000 arg=r
-tc Small0 jobbyteRandomGenerator.py n=100000
-tc Small1 jobbyteRandomGenerator.py n=100000
-tc Small2 jobbyteRandomGenerator.py n=100000
-tc Small3 jobbyteRandomGenerator.py n=100000
-tc Small4 jobbyteRandomGenerator.py n=100000
-tc Small5 jobbyteRandomGenerator.py n=100000
-tc Small6 jobbyteRandomGenerator.py n=100000
-tc Small7 jobbyteRandomGenerator.py n=100000
-tc Small8 jobbyteRandomGenerator.py n=100000
-tc Small9 jobbyteRandomGenerator.py n=100000
-tc Small10 jobbyteRandomGenerator.py n=100000
-tc Small11 jobbyteRandomGenerator.py n=100000
-tc Small12 jobbyteRandomGenerator.py n=100000
-tc Small13 jobbyteRandomGenerator.py n=100000
-tc Small14 jobbyteRandomGenerator.py n=100000
+tc Small0 jobbyteSmallGenerator n=100000 arg=r
+tc Small1 jobbyteSmallGenerator n=100000 arg=r
+tc Small2 jobbyteSmallGenerator  n=100000 arg=r
+tc Small3 jobbyteSmallGenerator  n=100000 arg=r
+tc Small4 jobbyteSmallGenerator  n=100000 arg=r
+tc Small5 jobbyteSmallGenerator  n=100000 arg=r
+tc Small6 jobbyteSmallGenerator  n=100000 arg=r
+tc Small7 jobbyteSmallGenerator n=100000 arg=r
+tc Small8 jobbyteSmallGenerator n=100000 arg=r
+tc Small9 jobbyteSmallGenerator n=100000 arg=r
+tc Big jobbyteRandomGenerator n=100000
+tc Big1 jobbyteRandomGenerator n=100000
+tc Big2 jobbyteRandomGenerator n=100000
+tc Big3 jobbyteRandomGenerator n=100000
+tc Big4 jobbyteRandomGenerator n=100000
+tc Big5 jobbyteRandomGenerator n=100000
+tc Big6 jobbyteRandomGenerator n=100000
+tc Big7 jobbyteRandomGenerator n=100000
+tc Big8 jobbyteRandomGenerator n=100000
+tc Big9 jobbyteRandomGenerator n=100000
+tc Big10 jobbyteRandomGenerator n=100000
+tc Big11 jobbyteRandomGenerator n=100000
+tc Big12 jobbyteRandomGenerator n=100000
+tc Big13 jobbyteRandomGenerator n=100000
+tc Big14 jobbyteRandomGenerator n=100000

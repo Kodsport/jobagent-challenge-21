@@ -4,6 +4,11 @@ import random
 import collections
 import sys
 
+def cmdlinearg(name):
+    for arg in sys.argv:
+        if arg.startswith(name + "="):
+            return arg.split("=", 1)[1]
+
 def genPairs(n):
     shuffled = random.sample(list(range(1,1+n)), n)
     output = []
@@ -14,7 +19,7 @@ def genPairs(n):
         i -= 2
     for j in range(i):
         output.append([shuffled[j], shuffled[j+1]])
-    output.append(shuffled[i], shuffled[0])
+    output.append([shuffled[i], shuffled[0]])
     return output
 
 def genSmall(n):
@@ -42,5 +47,7 @@ def main():
     elif arg == "r":
         output = genSmall(n)
 
+    print(str(n))
+    for i in range(n): print(' '.join(map(str,output[i])))
 if __name__ == "__main__":
     main()
