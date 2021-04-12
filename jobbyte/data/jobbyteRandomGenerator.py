@@ -10,7 +10,7 @@ def cmdlinearg(name):
             return arg.split("=", 1)[1]
 
 def genRandom(n):
-    output = random.sample([[i,j] for i, j in enumerate(random.sample(list(range(1,n+1)),n))],n)
+    output = random.sample([[i+1,j] for i, j in enumerate(random.sample(list(range(1,n+1)),n))],n)
     print(str(n))
 
     for i in range(n): print(' '.join(map(str,output[i])))

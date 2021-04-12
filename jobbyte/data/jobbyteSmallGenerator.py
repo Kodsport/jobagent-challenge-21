@@ -41,7 +41,7 @@ def main():
     n = int(cmdlinearg("n"))
     arg = cmdlinearg("arg")
     if arg == "f":
-        output = [[i,i] for i in range(n)]
+        output = [[i,i] for i in range(1,1+n)]
     elif arg == "p":
         output = genPairs(n)
     elif arg == "r":
