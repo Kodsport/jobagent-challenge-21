@@ -10,6 +10,9 @@ void run(){
 		vector<string> tokens = SpacedTokens(m);
 		for (const string& tok : tokens) {
 			assert(!tok.empty());
+			for (char c : tok) {
+				assert(('a' <= c && c <= 'z') || ('0' <= c && c <= '9'));
+			}
 		}
 	}
 }
