@@ -5,9 +5,9 @@ def correct_seq(m):
     for i in range(1,m+1):
         s = ""
         if i % 3 == 0:
-            s += "Fizz"
+            s += "fizz"
         if i % 5 == 0:
-            s += "Buzz"
+            s += "buzz"
         if len(s) == 0:
             s = str(i)
         l.append(s)
@@ -27,8 +27,6 @@ for i in range(n):
     
     if err < minerr:
         minerr = err
-        best = [str(i+1)]
-    elif err == minerr:
-        best.append(str(i+1))
+        best = str(i+1)
 
-print(' '.join(best))
+print(best)

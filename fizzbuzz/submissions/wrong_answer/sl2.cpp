@@ -15,17 +15,16 @@ int main() {
 			cin >> w;
 			string exp;
 			// if (j % 15 == 0) exp = "FizzBuzz";
-			if (j % 5 == 0) exp = "Buzz";
-			else if (j % 3 == 0) exp = "Fizz";
+			if (j % 5 == 0) exp = "buzz";
+			else if (j % 3 == 0) exp = "fizz";
 			else exp = to_string(j);
 			cor += (w == exp);
 		}
 		if (cor > best) {
 			best = cor;
 			bestv.clear();
+		  bestv.push_back(i + 1);
 		}
-		if (cor == best) bestv.push_back(i + 1);
 	}
-	for (int x : bestv) cout << x << ' ';
-	cout << endl;
+	for (int x : bestv) cout << x << endl;
 }
