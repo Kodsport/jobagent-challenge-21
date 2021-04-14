@@ -19,8 +19,8 @@ int main() {
 		if (cor > best) {
 			best = cor;
 			bestv.clear();
+		  bestv.push_back(i + 1);
 		}
-		if (cor == best) bestv.push_back(i + 1);
 	}
 	for (int x : bestv) cout << x << ' ';
 	cout << endl;
