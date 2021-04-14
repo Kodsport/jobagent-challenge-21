@@ -1,14 +1,20 @@
-\problemname{Jobbyte}
-I den datorgenererade världen Matriks jobbar du med att designa unika rutchkanor till coola kontor. Därför jobbar du förstås som konsult. 
-Företag brukar vilja matcha sina rutchkanor med den senaste produkten de har lanserat och alla coola företag lanserar en ny produkt samma vecka varje år. T.ex har lanserar alltid företaget Päron nya walkie-talkies första veckan i oktober och företaget Vesla lanserar alltid nya elcyklar i mitten på april.
-När du på nyårsafton tittar igenom din mailkorg hittar du därför $N$ stående jobberbjudanden med start olika veckor på året. Du vet att du alltid själv kan välja att jobba för ett företag 13, 26 eller 39 veckor (1, 2 eller 3 kvartal) och att du aldrig kommer få några nya jobberbjudanden i din karriär. Du kan inte heller ha två jobb samtidigt.
-Hur ska du planera de $M$ åren som är kvar av din karriär så att du är arbetslös så få veckor som möjligt?
+\problemname{Konsultarbeten}
+I den datorgenererade världen Matriks jobbar du som konsult åt olika hippa IT-företag som behöver unika rutschkanor till sina coola kontor.
+Under det föregående året fick du ett antal jobberbjudanden vid olika tidpunkter, mätt i millisekunder sedan årets början.
+För varje jobb kunde du välja om du ska designa en liten, medelstor eller gigantisk rutschkana år företaget, vilket tar $2 \cdot 10^5$, $3 \cdot 10^5$ respektive $4 \cdot 10^5$ millisekunder.
+Under tiden du utför ett uppdrag måste du tacka nej till alla andra erbjudanden som dyker upp under den tiden.
 
-(Det är alltid exakt 52 veckor på ett år och du kan tänka dig jobba lite efter att din karriär är slut, bara inte ta några nya jobb.)
+När du tittar tillbaka på året är du på intet sätt missnöjd med din inkomst (vem kan klaga på att jobba med rutschkanedesign?), men kanske hade du kunnat välja vilka jobb du tog på ett sätt som hade gett ännu mer pengar.
+Du fakturerar din kunder $1$ kaka per $10^5$ millisekunder som du jobbar.
+Om du hade valt uppdragen och deras längder på ett optimalt sätt, hur mycket kakor hade du kunnat tjäna?
+
 
 \section*{Indata}
-Två tal $1 \leq N \leq 52$ och $1 \leq M \leq 10^9$, antalet jobberbjudanden och antalet år kvar på din karriär. 
-En rad med $N$ st tal. Tal $a_i$ är veckan som företag $i$ vill att du ska börja jobba. Inga två företag vill att du ska börja arbeta samma vecka.
+Den första raden innehåller ett heltal $N$ ($1 \le N \le 10^5$), antalet jobberbjudanden du fick under året.
+
+Den andra och sista raden innehåller $N$ heltal separerade med blanksteg, tiderna då du fick ett jobberbjudande mätt i millisekunder från årets början.
+Ett år innehåller $31\,556\,926 \cdot 10^3$ millisekunder.
+Det är garanterat att varje jobberbjudande kom minst $4 \cdot 10^5$ millisekunder innan årets slut.
 
 \section*{Utdata}
-Ett heltal, det minsta antalet veckor du måste vara arbetslös. 
+Skriv ut ett heltal, antalet kakor du hade kunnat tjäna som mest under året.
