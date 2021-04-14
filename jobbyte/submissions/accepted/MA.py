@@ -14,9 +14,6 @@ def numberOfSteps(unordered_list, n):
     return steps
 
 n = int(input())
-jobs = [0 for _ in range(n)]
-for i in range(n):
-    c, w = map(int, input().split())
-    jobs[c-1] = w-1
+jobs = [int(x) - 1 for x in input().split()]
 
 print(numberOfSteps(jobs,n))

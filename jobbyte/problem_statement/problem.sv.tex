@@ -3,13 +3,16 @@ Du och dina kompisar jobbar alla på olika företag.
 Dock känner inte alla sig helt nöjda med vad de håller på med. 
 Ni har därför bett JobAgent ta reda på om det finns ett roligare jobb som skulle passa er bättre.
 Efter en tids beräknande återkommer JobAgent med en lista på vilket jobb som hade varit bäst för var och en av er, och det bästa är att någon i er vänkrets redan jobbar på var och ett av de föreslagna jobben. 
-Som goda medarbetare skulle ni aldrig kunna tänka er lämna ett jobb utan ersättare och aldrig heller vara arbetslösa, ni måste alltså byta jobb mellan varandra. 
-Hur många byten måste ni minst göra för att alla ska hamna på det jobb som JobAgent föreslagit. Jobben har blivit numrerade från 1 till $N$ för enkelhets skull. 
+Som goda medarbetare skulle ni aldrig kunna tänka er lämna ett jobb utan ersättare och aldrig heller vara arbetslösa.
+Den rimliga lösningen är såklart att upprepade gånger byta jobb med varandra.
+Hur många gånger måste två personer byta jobb för att alla ska hamna på det jobb som Jobagent föreslagit?
 
 \section*{Indata}
-Ett tal $2 \leq N \leq 10^5$.
-Därefter $N$ rader med två tal: $a_i$, jobbet person $i$ nu har, och $b_i$, det optimala jobbet för person $i$.
+Den första raden i indatan består av ett heltal $N$ ($2 \le N \le 10^5$), antalet kompisar (inklusive dig själv) som ska byta jobb.
+
+Därefter följer en rad med $N$ heltal.
+Det $i$'te av dessa heltal innehåller namnet på den person som just nu har jobbet som person $i$ är bäst lämpad för.
+Alla personer är numrerade mellan $1$ och $N$.
 
 \section*{Utdata}
 Ett heltal, det minsta antalet jobbyten som måste göras. 
-

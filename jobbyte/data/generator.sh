@@ -18,11 +18,11 @@ tc allCorrect jobbyteSmallGenerator n=100000 arg=f
 tc allCorrect2 jobbyteSmallGenerator n=99999 arg=f
 tc Small0 jobbyteSmallGenerator n=100000 arg=r
 tc Small1 jobbyteSmallGenerator n=100000 arg=r
-tc Small2 jobbyteSmallGenerator  n=100000 arg=r
-tc Small3 jobbyteSmallGenerator  n=100000 arg=r
-tc Small4 jobbyteSmallGenerator  n=100000 arg=r
-tc Small5 jobbyteSmallGenerator  n=100000 arg=r
-tc Small6 jobbyteSmallGenerator  n=100000 arg=r
+tc Small2 jobbyteSmallGenerator n=100000 arg=r
+tc Small3 jobbyteSmallGenerator n=100000 arg=r
+tc Small4 jobbyteSmallGenerator n=100000 arg=r
+tc Small5 jobbyteSmallGenerator n=100000 arg=r
+tc Small6 jobbyteSmallGenerator n=100000 arg=r
 tc Small7 jobbyteSmallGenerator n=100000 arg=r
 tc Small8 jobbyteSmallGenerator n=100000 arg=r
 tc Small9 jobbyteSmallGenerator n=100000 arg=r

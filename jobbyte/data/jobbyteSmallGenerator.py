@@ -10,30 +10,24 @@ def cmdlinearg(name):
             return arg.split("=", 1)[1]
 
 def genPairs(n):
-    shuffled = random.sample(list(range(1,1+n)), n)
-    output = []
-    i = n-1
-    while i >= 3:
-        output.append([shuffled[i], shuffled[i-1]])
-        output.append([shuffled[i-1],shuffled[i]])
-        i -= 2
-    for j in range(i):
-        output.append([shuffled[j], shuffled[j+1]])
-    output.append([shuffled[i], shuffled[0]])
+    S = list(range(n))
+    random.shuffle(S)
+    output = [str(x) for x in range(1, n + 1)]
+    while len(S) >= 2:
+        output[S[-1]], output[S[-2]] = output[S[-2]], output[S[-1]]
+        S = S[:-2]
     return output
 
 def genSmall(n):
-    transform = dict(zip(list(range(n)),random.sample(list(range(1,1+n)), n)))
-    output = []
-    
-    i = 0
-    while i < n:
-        iters = min(random.randint(1,7), n - i - 1)
-        for _ in range(iters):
-            output.append([transform[i], transform[i+1]])
-            i += 1
-        output.append([transform[i], transform[i-iters]])
-        i += 1
+    S = list(range(n))
+    random.shuffle(S)
+    output = [str(x) for x in range(1, n + 1)]
+
+    while S:
+        cyclen = random.randint(1, min(len(S), 7))
+        for k in range(cyclen - 1):
+            output[S[k]], output[S[k+1]] = output[S[k+1]], output[S[k]]
+        S = S[:-cyclen]
     return output
 
 def main():
@@ -41,13 +35,13 @@ def main():
     n = int(cmdlinearg("n"))
     arg = cmdlinearg("arg")
     if arg == "f":
-        output = [[i,i] for i in range(1,1+n)]
+        output = [str(x) for x in range(1, n + 1)]
     elif arg == "p":
         output = genPairs(n)
     elif arg == "r":
         output = genSmall(n)
 
     print(str(n))
-    for i in range(n): print(' '.join(map(str,output[i])))
+    print(*output)
 if __name__ == "__main__":
     main()
