@@ -35,7 +35,11 @@ def gen_random(n, m, fixed_thresh):
             if random.uniform(0,1) > thresh:
                 vals.append(correct[j])
             else:
-                vals.append(random.choice(correct))
+                if thresh > 0.9:
+                    vals.append("0" + random.choice(correct))
+                else:
+                    vals.append(random.choice(correct))
+                
         print(*vals)
 
 def all_same(n, m, correct):
