@@ -5,7 +5,7 @@ Ni har därför bett JobAgent ta reda på om det finns ett roligare jobb som sku
 Efter en tids beräknande återkommer JobAgent med en lista på vilket jobb som hade varit bäst för var och en av er, och det bästa är att någon i er vänkrets redan jobbar på var och ett av de föreslagna jobben. 
 Som goda medarbetare skulle ni aldrig kunna tänka er lämna ett jobb utan ersättare och aldrig heller vara arbetslösa.
 Den rimliga lösningen är såklart att upprepade gånger byta jobb med varandra.
-Hur många gånger måste två personer byta jobb för att alla ska hamna på det jobb som Jobagent föreslagit?
+Hur många gånger måste två personer byta jobb för att alla ska hamna på det jobb som JobAgent föreslagit?
 
 \section*{Indata}
 Den första raden i indatan består av ett heltal $N$ ($2 \le N \le 10^5$), antalet kompisar (inklusive dig själv) som ska byta jobb.
@@ -16,3 +16,10 @@ Alla personer är numrerade mellan $1$ och $N$.
 
 \section*{Utdata}
 Ett heltal, det minsta antalet jobbyten som måste göras. 
+
+\section*{Förklaring av exempel 2}
+Här har ingen person rätt jobb från början.
+Tre jobbyten räcker dock för att alla ska få rätt jobb.
+Först kan de två första personerna byta jobb, så att personerna nu har jobb \texttt{3 2 4 1} och person 2 har rätt jobb.
+Sedan kan person 3 och 4 byta jobb, vilket resulterar i jobben \texttt{3 2 1 4}.
+Då har bara personerna 1 och 3 fel jobb, och byter med varandra för att slutföra processen.
