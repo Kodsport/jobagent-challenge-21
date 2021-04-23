@@ -8,6 +8,7 @@ use_solution sl.cpp
 compile generateRandom.py
 compile generatePermutations.py
 compile genspecial.py
+compile genspecial2.py
 
 samplegroup
 limits maxN=1000000
@@ -28,6 +29,7 @@ tc onehuge-small generateRandom n=5000 m=4500 s=1
 tc onehuge2-small generateRandom n=5000 m=4501 s=1
 tc specialbig-small genspecial n=5000 m=4500
 tc specialbig2-small genspecial n=5000 m=2501
+tc special2-small genspecial2 n=5000
 tc random0-small generateRandom n=5000 m=100 s=10
 tc random1-small generateRandom n=5000 m=100 s=100
 tc random2-small generateRandom n=5000 m=100 s=1000
@@ -47,6 +49,7 @@ tc onehuge generateRandom n=1000000 m=900000 s=1
 tc onehuge2 generateRandom n=1000000 m=900001 s=1
 tc specialbig genspecial n=1000000 m=900000
 tc specialbig2 genspecial n=1000000 m=500001
+tc special2 genspecial2 n=1000000
 tc random0 generateRandom n=1000000 m=100 s=10
 tc random1 generateRandom n=1000000 m=100 s=100
 tc random2 generateRandom n=1000000 m=100 s=1000
