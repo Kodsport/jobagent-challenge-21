@@ -38,6 +38,7 @@ int N, M;
 string s;
 
 int sol(vi& P) {
+  return sz(P);
 	vi dup = P;
 	for (int i : P) dup.push_back(i + N);
 	vector<vi> nx(20, vi(sz(dup)));

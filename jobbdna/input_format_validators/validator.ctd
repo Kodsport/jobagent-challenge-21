@@ -1,4 +1,4 @@
-INT(2, 100000, n)
+INT(2, 1000000, n)
 SPACE
 INT(2, n, m)
 NEWLINE

@@ -40,13 +40,13 @@ string s;
 int sol(vi& P) {
 	vi dup = P;
 	for (int i : P) dup.push_back(i + N);
-	vector<vi> nx(20, vi(sz(dup)));
+	vector<vi> nx(17, vi(sz(dup)));
 	int ptr = 0;
 	rep(i,0,sz(dup)) {
 		while (ptr != sz(dup) && dup[ptr] < dup[i] + M) ++ptr;
 		nx[0][i] = ptr;
 	}
-	rep(jmp,1,20) {
+	rep(jmp,1,17) {
 		rep(i,0,sz(dup)) {
 			int x = nx[jmp - 1][i];
 			if (x != sz(dup)) x = nx[jmp - 1][x];
@@ -58,7 +58,7 @@ int sol(vi& P) {
 	rep(i,0,sz(P)) {
 		int res = 0;
 		int at = i;
-		for (int jmp = 19; jmp >= 0; --jmp) {
+		for (int jmp = 16; jmp >= 0; --jmp) {
 			if (nx[jmp][at] <= i + sz(P)) {
 				at = nx[jmp][at];
 				res += 1 << jmp;
@@ -70,18 +70,9 @@ int sol(vi& P) {
 }
 
 bool isless(HashInterval& ha, int a, int b) {
-	int lo = 0;
-	int hi = M;
-	while (hi - lo > 1) {
-		int mid = (lo + hi) / 2;
-		if (ha.hashInterval(a, a + mid) == ha.hashInterval(b, b + mid)) {
-			lo = mid;
-		} else {
-			hi = mid;
-		}
-	}
-	return s[a + lo] < s[b + lo];
-
+  rep(i,0,M)
+    if (s[a + i] != s[b + i]) return s[a + i] < s[b + i];
+  assert(false);
 }
 
 int main() {
