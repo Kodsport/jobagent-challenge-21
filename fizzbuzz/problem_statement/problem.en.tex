@@ -1,0 +1,31 @@
+\problemname{FizzBuzz}
+A company is hiring a software engineer to a top secret job.
+After a lot of headhunting they now have $N$ candidates left, denoted $1$ to $N$ after anonymization.
+To test the sksill of the candidates, the company has asked them to implement FizzBuzz.
+
+A correct implementation of FizzBuzz does the following.
+For each and every of the integers $1$ to $M$,
+\begin{itemize}
+  \item if the number is divisible by $3$, ``fizz'' is output,
+  \item if the number is divisible by $5$, ``buzz'' is output,
+  \item if the number is divisible by both $3$ and $5$, ``fizzbuzz'' is output, and
+  \item if the number is divisible by neither $3$ and $5$, the number itself is output.
+\end{itemize}
+
+Since the job is top secret, the company cares very much about the right thing being printed in the right place.
+Your task is to find the candidate whose program outputs the right thing at the right position the most times.
+
+\section*{Input}
+The first line of the input consists of the integers $N$ ($2 \leq N \leq 1000$) and $M$ ($2 \leq M \leq 100$), the number of candidates and the number of values their programs should output.
+
+The next $N$ lines each contains $M$ strings consisting only of small letters \texttt{a-z} and digits $0$-$9$, separated by a single whitespace.
+The $i$'th of these lines contains the output from candidate $i$.
+Each of the $M$ strings in the output from a candidate contains at least one character.
+
+\section*{Output}
+Print the number of the candidate whose output has the most correct words printed in the correct place.
+In case of a tie, output the candidate with the lowest number.
+
+\section*{Explanation of sample 1}
+In the example, the third candiate output the right thing at every place.
+The other two has at least one incorrect output, so the third person has the most correct words.

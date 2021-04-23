@@ -13,6 +13,7 @@ Den första raden i indatan består av ett heltal $N$ ($2 \le N \le 10^5$), anta
 Därefter följer en rad med $N$ heltal.
 Det $i$'te av dessa heltal innehåller namnet på den person som just nu har jobbet som person $i$ är bäst lämpad för.
 Alla personer är numrerade mellan $1$ och $N$.
+Det är garanterat att för varje jobb är det exakt en person som är bäst lämpad för jobbet.
 
 \section*{Utdata}
 Ett heltal, det minsta antalet jobbyten som måste göras. 
@@ -20,6 +21,6 @@ Ett heltal, det minsta antalet jobbyten som måste göras.
 \section*{Förklaring av exempel 2}
 Här har ingen person rätt jobb från början.
 Tre jobbyten räcker dock för att alla ska få rätt jobb.
-Först kan de två första personerna byta jobb, så att personerna nu har jobb \texttt{3 2 4 1} och person 2 har rätt jobb.
-Sedan kan person 3 och 4 byta jobb, vilket resulterar i jobben \texttt{3 2 1 4}.
-Då har bara personerna 1 och 3 fel jobb, och byter med varandra för att slutföra processen.
+Först kan de två första personerna byta jobb, så att personerna nu har jobb \texttt{3 2 4 1} och person $2$ har rätt jobb.
+Sedan kan person $3$ och $4$ byta jobb, vilket resulterar i jobben \texttt{3 2 1 4}.
+Då har bara personerna $1$ och $3$ fel jobb, och byter med varandra för att slutföra processen.

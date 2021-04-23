@@ -1,19 +1,20 @@
-\problemname{Äppelspelet}
-Alf och Beata har en jättelång trädgård med $N$ äppelträd som står i en lång rad.
-Varje sommar när träden är fulla med äpplen spelar de ett spel med träden.
-I spelet turas Alf och Beata om att plocka alla äpplen från tre träd som har exakt ett träd mellan sig, d.v.s från träden $i$, $i + 2$ och $i + 4$ platser från vänster för något $i$.
-Ett sådant drag är bara giltigt om inget av de tre träden fått sina äpplen plockade från sig sedan tidigare.
-Om en spelare inte har något giltigt drag när det är dennes tur förlorar spelaren.
-Givet $N$, kan du avgöra om Alf eller Beata vinner spelet om Alf gör det första draget?
+\problemname{The Apple Game}
+Alf and Beata has a very long garden in which $N$ apple trees grow in a long line.
+Each summer, the trees become filled with apples.
+They then play a game with the trees.
+In the game, Alf and Beata take turns picking all the paples from three trees which are separated by exactly one tree, i.e. from the trees $i$, $i + 2$ and $i + 4$ spots from the leftmost tree for some $i$.
+Such a move is only valid if none of the three trees had their apples picked from them in a previous move.
+A player without a valid move on their turn loses.
+Given $N$, can you determine if Alf or Beata wins the game if Alf moves first?
 
-\section*{Indata}
-Indatan består av ett enda heltal $N$ ($5 \le N \le 1\,000\,000$), antalet äppelträd.
+\section*{Input}
+The input consists of a single integer $N$ ($5 \le N \le 1\,000\,000$), the number of apple trees.
 
-\section*{Utdata}
-Om Alf (den första spelaren) vinner, skriv ut \texttt{alf}.
-Annars, skriv ut \texttt{beata}.
+\section*{Output}
+If Alf (the first player) wins, output \texttt{alf}.
+Otherwise, output \texttt{beata}.
 
-\section*{Poängsättning}
-Löser du problemet fullt ut får du $2$ poäng.
+\section*{Scoring}
+If you solve the problem fully, you get $2$ points.
 
-För att få $1$ poäng räcker det med att du kan lösa problemet för de fall då $N \le 1\,000$.
+To get $1$ point, you only need to solve the problem for cases where $N \le 1\,000$.

@@ -1,0 +1,23 @@
+\problemname{Job DNA}
+During hundreds of years, people have been dissatisfied with their jobs.
+Maybe they were too boring, too difficulty or simply not just right for some reason.
+After much research, JobAgent has successfully modelled how good you are at a job using a circular string of length $N$, your so-called ``job DNA''.
+Each possible job can be identified with a text string of length $M$.
+How good you are at a job can then be measured as the largest number of \emph{non-overlapping} occurrances of the string in your job DNA.
+JobAgent wants to use your job DNA to find the job that fits you the best.
+Can you find the text string for the job that fits you the best?
+
+\section*{Input}
+The first line of the input consists of two integers $N$ and $M$ ($2 \le M \le N \le 10^6$), the length of the job DNA string and the length of the string that a job can be identified with.
+
+The second and final line contains a string with $N$ characters \texttt{a-z}, the job DNA you should find the best job for.
+Note that this string is circular, so that the last character in the string is immediately followed by the first one.
+
+\section*{Output}
+Output the length $M$ string that occurrs the most times.
+If there are several such strings, output the lexicographically smallets one.
+
+\section*{Scoring}
+If you solve the problem fully, you get $2$ points.
+
+To get $1$ point, you only need to solve the problem for cases where $N \le 5\,000$.
