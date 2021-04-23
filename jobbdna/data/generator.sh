@@ -9,11 +9,14 @@ compile generateRandom.py
 compile generatePermutations.py
 compile genspecial.py
 
+samplegroup
+limits maxN=1000000
 sample 1
 sample 2
 sample 3
 
 group g1 1
+limits maxN=5000
 tc 1
 tc 2
 tc 3
@@ -36,6 +39,7 @@ tc random7-small generateRandom n=5000 m=3980 s=10
 tc random8-small generateRandom n=5000 m=3980 s=100
 
 group g2 1
+limits maxN=1000000
 include_group g1
 tc permutations3 generatePermutations n=150000 m=4
 tc allsame generateRandom n=1000000 m=2 s=1
