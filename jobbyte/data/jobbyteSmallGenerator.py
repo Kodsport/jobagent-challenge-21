@@ -15,7 +15,8 @@ def genPairs(n):
     output = [str(x) for x in range(1, n + 1)]
     while len(S) >= 2:
         output[S[-1]], output[S[-2]] = output[S[-2]], output[S[-1]]
-        S = S[:-2]
+        S.pop()
+        S.pop()
     return output
 
 def genSmall(n):
@@ -27,7 +28,8 @@ def genSmall(n):
         cyclen = random.randint(1, min(len(S), 7))
         for k in range(cyclen - 1):
             output[S[k]], output[S[k+1]] = output[S[k+1]], output[S[k]]
-        S = S[:-cyclen]
+        for k in range(cyclen):
+            S.pop()
     return output
 
 def main():
