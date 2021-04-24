@@ -14,7 +14,7 @@ The first line of the input consists of an integer $N$ ($2 \le N \le 3\cdot10^5$
 This is followed by a line containing $N$ integers.
 The $i$'th of these contains the name of the person that currently has the job that the $i$'th person fits best for.
 Every person is numbered between $1$ and $N$.
-It is guaranteed that for each job there is exactly one person that it fits best.
+It is guaranteed that for each job there is exactly one person that fits it best.
 
 \section*{Output}
 Output a single integer, the smallest number of job switches that needs to be performed.
@@ -22,6 +22,6 @@ Output a single integer, the smallest number of job switches that needs to be pe
 \section*{Explanation of sample 2}
 Nobody has the right job from the beginning.
 Three switches are sufficient for everyone to get the right job.
-First, the two first persons can switch jobs, so that everyone has the jobs \texttt{3 2 4 1} and person $2$ gets the right job.
-The, persons $3$ and $4$ can switch jobs, resulting in the jobs \texttt{3 2 1 4}.
-Then only persons $1$ and $3$ has the wrong jobs, and can switch with each other to finish the process.
+Initially, the two first peoples can switch jobs, so that everyone has the jobs \texttt{3 2 4 1} and person $2$ gets the right job.
+Then, person $3$ and $4$ can switch jobs, resulting in the jobs \texttt{3 2 1 4}.
+Lastly, only person $1$ and $3$ has the wrong jobs, and can switch with each other to finish the process.
