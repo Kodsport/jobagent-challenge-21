@@ -9,6 +9,7 @@ void run(){
 
   string tok = _token();
   Endl();
+  assert((int)tok.size() == n);
     for (char c : tok) {
       assert(('a' <= c && c <= 'z'));
     }

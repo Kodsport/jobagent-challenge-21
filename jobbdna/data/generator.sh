@@ -3,7 +3,7 @@
 USE_SCORING=1
 . ../../testdata_tools/gen.sh
 
-use_solution sl.cpp
+use_solution sl.cpp opt
 
 compile generateRandom.py
 compile generatePermutations.py
