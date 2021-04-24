@@ -28,6 +28,7 @@ tc rand7-small gencat n=562
 tc rand8-small gencat n=537
 tc rand9-small gencat n=435
 tc rand10-small gencat n=437
+tc big-small gencat n=999
 tc max-small gencat n=1000
 
 group g2 1
@@ -46,7 +47,7 @@ tc rand10 gencat n=439827
 tc big1 gencat n=999999
 tc big2 gencat n=999998
 tc big3 gencat n=999997
-tc big4 gencat n=999996
+tc big4 gencat n=999995
 tc big-beata gencat n=999971
 tc big-beata-2 gencat n=887505
 tc big-beata-3 gencat n=465512
