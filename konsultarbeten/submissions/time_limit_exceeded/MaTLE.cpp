@@ -11,7 +11,7 @@ ll inf = pow(10,18);
 vector<ll> jobs;
 
 ll search(ll value, ll index){
-    rep(j,index+1, len(jobs)){
+    rep(j,index, len(jobs)){
         if (jobs[j] >= value) return j;
     }
     return (len(jobs) - 1);
@@ -39,10 +39,10 @@ int main(){
 
     rep(i,0,len(jobs)-1){
         ll tim = jobs[i];
-        ll index = search(tim + 1, i);
+        ll index = search(tim + 1, i+1);
         mest_cash[index] = max(mest_cash[index], mest_cash[i]);
         rep(j,2,5){
-            ll index = search(tim + j*100000, i);
+            index = search(tim + j*100000, index);
             mest_cash[index] = max(mest_cash[index], mest_cash[i]+j);
         }
     }
