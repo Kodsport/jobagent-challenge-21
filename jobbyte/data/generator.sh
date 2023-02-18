@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-USE_SCORING=0
 . ../../testdata_tools/gen.sh
 
 use_solution MA.py
@@ -8,10 +7,15 @@ use_solution MA.py
 compile jobbyteRandomGenerator.py
 compile jobbyteSmallGenerator.py
 
+samplegroup
 sample 1
 sample 2
 sample 3
 
+group g1 1
+tc 1
+tc 2
+tc 3
 tc allPairs jobbyteSmallGenerator n=300000 arg=p
 tc allPairs2 jobbyteSmallGenerator n=299999 arg=p
 tc allCorrect jobbyteSmallGenerator n=300000 arg=f

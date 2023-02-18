@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-USE_SCORING=0
 . ../../testdata_tools/gen.sh
 
 use_solution MA.cpp
@@ -8,11 +7,16 @@ use_solution MA.cpp
 compile GenerateRandom.py
 compile GenerateSpecial.py
 
+samplegroup
 sample 1
 sample 2
 sample 3
 
 
+group g1 1
+tc 1
+tc 2
+tc 3
 tc all_zeros GenerateSpecial n=100000 arg=z
 tc close GenerateSpecial n=100000 arg=c
 tc randomsmall0 GenerateRandom n=1000

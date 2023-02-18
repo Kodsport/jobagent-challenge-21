@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 
-USE_SCORING=0
 . ../../testdata_tools/gen.sh
 
 use_solution MA.py
 
 compile FizzBuzz_generator.py
 
+samplegroup
 sample 1
 sample 2
 sample 3
 
+group g1 1
+tc 1
+tc 2
+tc 3
 tc all_correct FizzBuzz_generator n=2 m=2 arg=c
 tc all_correct2 FizzBuzz_generator n=1000 m=100 arg=c
 tc all_correct3 FizzBuzz_generator n=10 m=15 arg=c
